@@ -1,0 +1,41 @@
+﻿<Window x:Class="SUNSHINESIPPINTERM.Membership"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SUNSHINESIPPINTERM"
+        mc:Ignorable="d"
+        Title="Membership" Height="450" Width="800">
+    <Canvas OpacityMask="#FF86ECBF">
+        <Canvas.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF2EDA40" Offset="0.25"/>
+                <GradientStop Color="#FF1FFF00" Offset="0.97"/>
+                <GradientStop Color="#FF093C0A" Offset="0.633"/>
+            </LinearGradientBrush>
+        </Canvas.Background>
+        <TextBox Height="52" TextWrapping="Wrap" Text="𝑀𝑒𝓂𝒷𝑒𝓇𝓈𝒽𝒾𝓅 𝐼𝓃𝒻𝑜𝓇𝓂𝒶𝓉𝒾𝑜𝓃 ♔" Canvas.Top="10" Width="458" FontSize="24" FontWeight="Bold" Background="{x:Null}"/>
+        <Label Content="First Name: " Canvas.Top="72" HorizontalAlignment="Left" VerticalAlignment="Top" Width="193" Height="30" FontFamily="Tahoma" FontSize="16" Canvas.Left="2"/>
+        <Label Content="Last Name: " Canvas.Top="147" Width="193" Height="30" FontFamily="Tahoma" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtFirstName" TextWrapping="Wrap" Canvas.Top="102" Width="168" Height="29" Canvas.Left="72" FontFamily="Century Gothic" FontSize="14"/>
+        <TextBox x:Name="txtLastName" TextWrapping="Wrap" Canvas.Top="182" Width="168" Height="29" Canvas.Left="72" FontFamily="Century Gothic" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Canvas.Left="565" TextWrapping="Wrap" Text="Transaction History:" Canvas.Top="77" Height="20" Width="158" FontFamily="Tahoma" FontSize="14"/>
+        <Button x:Name="btnAddMembers" Content="Add &#xD;&#xA;Members" Canvas.Left="60" Canvas.Top="370" HorizontalAlignment="Center" VerticalAlignment="Top" Width="192" Height="52" Background="#FF9CFF82" FontFamily="Tahoma" FontSize="16" Click="btnAddMembers_Click" FontWeight="Bold"/>
+
+        <ListBox x:Name="lbMember" Height="337" Width="268" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="279" Canvas.Top="85" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <ListBox x:Name="lbHx" Height="318" Width="198" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="565" Canvas.Top="95" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Canvas Height="101" Width="181" Canvas.Left="60" Canvas.Top="245" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFD455EA"/>
+                    <GradientStop Color="#FFABFF00" Offset="1"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+            <RadioButton x:Name="rbStandard" Content="Standard" Canvas.Left="10" Canvas.Top="38" HorizontalAlignment="Center" VerticalAlignment="Top" Width="136" Height="25" FontFamily="Tahoma" FontSize="16"/>
+            <RadioButton x:Name="rbGold" Content="Gold" Canvas.Left="10" Canvas.Top="68" Width="136" Height="25" FontFamily="Tahoma" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock TextWrapping="Wrap" Height="33" Width="159" FontFamily="Arial Black" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Membership"/><LineBreak/><Run Text="       Type: "/></TextBlock>
+        </Canvas>
+
+
+    </Canvas>
+</Window>
